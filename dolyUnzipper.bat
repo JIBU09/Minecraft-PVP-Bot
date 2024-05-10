@@ -2,6 +2,18 @@
 setlocal
 
 
+echo -----Waiting 30 seconds till the download is complete-----
+timeout /t 30 /nobreak >nul
+
+:startUnzipping
+if not exist "%userprofile%\Downloads\Minecraft-PVP-Bot-main.zip" (
+    echo !!---Error: File not found---!! 
+    echo -----Trying again in 30 seconds-----
+    timeout /t 30 /nobreak >nul
+    goto startUnzipping
+)
+
+
 Call :UnZipFile "%~dp0" "%userprofile%\Downloads\Minecraft-PVP-Bot-main.zip"
 exit /b
 
