@@ -245,9 +245,9 @@ bot.once("spawn", () => {
   bot.autoEat.options.bannedFood = []
   bot.autoEat.options.eatingTimeout = 3
   bot.chat('/clear')
-  bot.chat('/give @s dirt 5')
+  bot.chat('/give @s barrier 5')
   bot.chat('honey clicker')
-  //bot.chat('guard')
+  console.log("Joining...")
 })
 
 // The bot eats food automatically and emits these events when it starts eating and stops eating.
