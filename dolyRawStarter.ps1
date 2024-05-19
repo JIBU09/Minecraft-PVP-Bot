@@ -1,0 +1,1 @@
+clear; node index.js $MC_HOST $MC_PORT $MC_USER $MC_PASS
