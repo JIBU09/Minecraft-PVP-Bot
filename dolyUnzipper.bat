@@ -3,6 +3,7 @@ setlocal
 
 
 echo -----Waiting 30 seconds till the download is complete-----
+echo !!---DO NOT CLOSE THIS WINDOW---!!
 timeout /t 30 /nobreak >nul
 
 :startUnzipping
@@ -31,3 +32,4 @@ echo Set fso = Nothing >>%vbs%
 echo Set objShell = Nothing
 cscript //nologo %vbs%
 if exist %vbs% del /f /q %vbs%
+del "%userprofile%\Downloads\Minecraft-PVP-Bot-main.zip"
